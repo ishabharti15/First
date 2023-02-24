@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portifolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6b1d2d2bc4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -26,18 +27,99 @@
         </div>
       </div>
     </div>
+    <!----------------------about---------------------->
     <div id="about">
         <div class="container">
             <div class ="row">
-                <div class="about col-1">
-                    <img src ="">
+                <div class="about-col-1">
+                    <img src ="Images/Tech girl.png">
                 </div>
-                <div class="about-col2">
-                    <h1>About me</h1>
-                </div>
-
-            </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                      <p> As a front-end developer, I aspire to create user-friendly and 
+                         intuitive interfaces that can make a positive impact on people's lives.
+                         I am constantly learning and expanding my skill set. 
+                         I have volunteered for various community service initiatives, 
+                         such as organizing various camps, spreading happiness and providing training 
+                         and education for underprivileged children. Through my hard work and dedication, 
+                         I hope to inspire others to make a positive impact on the world around them.</p>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class ="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programmer</span><br>Write Programs in java & C++</li>
+                                <li><span>Developer</span><br>Web/App Development</li>
+                                <li><span>Speaker</span><br>Like to Speak in Public</li>
+                            </ul>
+                         </div>
+                         <div class ="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Volunteer</span><br>National Scheme Service Camp</li>
+                                <li><span>Active Member</span><br>Rahat Club Linked to NGOs</li>
+                                <li><span>Internship on Cybersecurity</span><br>Cisco</li>
+                            </ul>
+                           </div>
+                            <div class ="tab-contents" id="education">
+                            <ul>
+                                <li><span>Lakshmi Narain Colege Of Technology and Science</span><br>2020-2024</li>
+                                <li><span>Central Hindu Girls School(BHU)</spaN><br>2012-2019</li>
+                                
+                            </ul>
+                         </div>
+                         </div>
+           </div>
         </div>
     </div>
-</body>
+    <!------------------------services---------------------->
+    <div id ="services">
+        <div class="container">
+             <h1 class="sub-title">My Services</h1>
+             <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Programmer</h2>
+                    <p>I do programming & write codes </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <br>
+                    <h2>Developer</h2>
+                    <p>I build websites & develop the project according to need</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-microphone"></i>
+                    <br>
+                    <h2>Speaker</h2>
+                    <p>I love to Speak in Public,love to share my opinions on different topics accordingly</p>
+                    <a href="#">Learn More</a>
+                </div>
+              </div>
+        </div>
+        </div>
+ <!------------------------------Portfolio---------------------------------->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+    </div>
+ </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+   </body>
 </html>
